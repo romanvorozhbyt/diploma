@@ -1,0 +1,59 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+            <div class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Введіть ім'я користувача" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                    <label for="user-role">Виберіть роль користувача</label>
+                                    <select id="user-role" class="form-control" name="user-role">
+                                        <option value="" selected>Всі</option>
+                                        <option value="student">Студент</option>
+                                        <option value="lector">Викладач</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="faculties">Виберіть факультет</label>
+                                     <select id = "faculties" class="form-control" name="faculties">
+                                        <option value="" selected >Всі</option>
+                                        <option value="FRECS">Радіофізики Електроніки та комп'ютерних систем</option>
+                                        <option value="Cub">Кібернетики</option>
+                                        <option value="Math">Мехмат</option>
+                                        <option value="Urist">Юридичний</option>
+                                    </select>
+                                  </div>
+
+                                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                </form>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+	</div>
+</div>
+
+</body>
+</html>
